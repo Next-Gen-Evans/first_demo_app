@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,18 +14,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: HomePage(),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'My First Flutter App',
           style: TextStyle(
             color: Colors.white,
@@ -57,7 +61,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               
               // Subtitle
               Text(
@@ -69,7 +73,7 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               
               // Icon
               Icon(
@@ -78,12 +82,12 @@ class HomePage extends StatelessWidget {
                 color: Colors.purple.shade400,
               ),
               
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               
               // Fun fact
               Container(
-                padding: EdgeInsets.all(16),
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
                   color: Colors.purple.shade50,
                   borderRadius: BorderRadius.circular(15),
@@ -105,10 +109,11 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // We'll learn about this in later lessons!
-          print('Hello from Flutter!');
+           print('Hello from Flutter!');
         },
-        child: Icon(Icons.thumb_up),
+        
         backgroundColor: Colors.purple,
+        child: const Icon(Icons.thumb_up),
       ),
     );
   }
